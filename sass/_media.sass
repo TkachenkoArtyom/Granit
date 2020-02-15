@@ -1,0 +1,85 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+  .menu 
+    position: relative
+    ul
+      position: absolute
+      width: 100%
+      flex-direction: column
+      margin: 
+        top: 0
+      height: 240px
+      li 
+        height: 40px
+        a 
+          color: $text
+          width: 100%
+          height: 100%
+          display: flex
+          flex-direction: row 
+          justify-content: center
+          align-items: center
+          transition: all .5s ease-out
+          cursor: pointer
+          border: none
+          border-top: 1px solid #000
+          &:hover
+            background-color: lighten($yellow-hover, 10%)
+            text-decoration: none
+            transition: all .25s ease-in-out
+            font-size: 18px
+            color: $white
+            border: none
+            border-top: 1px solid #000
+            
+
+  .copy 
+    text-align: center
+
+// ≥576px
++media-breakpoint-down(xs)
+  .logo
+    justify-content: center
+    margin-bottom: 20px
+  .phone-wrapper 
+    text-align: center
+    margin-bottom: 20px
+  .feedback-button
+    margin-bottom: 20px
+
+  .s-under
+    &-logo
+      justify-content: center
+      margin-bottom: 20px
+    &-phone-wrapper 
+      text-align: center
+      margin-bottom: 20px
+    &-callBack-button 
+      float: none
+      margin: 0 auto
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
